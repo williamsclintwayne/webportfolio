@@ -51,18 +51,13 @@ The layout is fully responsive and optimized for mobile, tablet, and desktop vie
 To run the project locally:
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
-
 The application will be available at:
 
 http://localhost:5173
 
 Architecture Highlights
-
 Modular Vue components for each major section:
 
 Header
@@ -85,90 +80,64 @@ Clean separation between layout, content, and styling
 
 Technical Decisions
 Why Vue 3 + TypeScript
+Vue 3’s Composition API provides improved logic organization and scalability, while TypeScript enables safer refactoring, clearer data contracts, and better long-term maintainability.
 
-Vue 3’s Composition API offers better logic organization and scalability
-
-TypeScript ensures safer refactoring and clearer data contracts
-
-Strong alignment with modern frontend production standards
-
-Why Keep Custom CSS Instead of Rewriting
-
-Preserved design intent and visual identity
-
-Avoided unnecessary regressions
-
-Demonstrated the ability to integrate legacy styles into modern frameworks
+Why Retain Custom CSS
+The original handcrafted CSS was preserved to maintain design integrity, avoid visual regressions, and demonstrate the ability to integrate legacy styling into a modern framework without unnecessary rewrites.
 
 Handling Layout Issues in Vue
-
-Vue introduces an additional root element (#app), which initially broke the CSS Grid layout
-
-This was resolved using:
+Vue introduces an additional root element (#app), which initially broke the CSS Grid layout. This was resolved using:
 
 #app {
   display: contents;
 }
 
-
-This approach allows Vue to coexist with layout-critical CSS without restructuring the original grid logic
+This approach allows Vue to coexist with layout-critical CSS while preserving the original grid-based design.
 
 Component Strategy
-
-Sections were split into logical, reusable components
-
-Layout responsibility remains in the root structure
-
-Content components remain focused and readable
+Each major section was extracted into focused, reusable Vue components. Layout responsibilities remain at the root level, while content components stay clean, readable, and easy to maintain.
 
 Migration Case Study: HTML → Vue 3
 Original State
-
 Static HTML and CSS
 
 Single HTML file
 
 No component abstraction
 
-Manual updates required for content changes
+Manual content updates
 
 Migration Goals
-
-Preserve original design and layout
+Preserve the original design and layout
 
 Introduce component-based architecture
 
-Improve long-term maintainability
+Improve maintainability and scalability
 
-Prepare the project for future expansion
+Prepare the project for future enhancements
 
-Migration Steps
-
+Migration Process
 Scaffolded a Vue 3 + TypeScript project using Vite
 
-Broke the HTML into semantic Vue components
+Decomposed the HTML into semantic Vue components
 
-Integrated original CSS globally without modification
+Integrated the original CSS globally without modification
 
 Resolved CSS Grid conflicts caused by Vue’s root element
 
 Verified responsive behavior across all breakpoints
 
 Outcome
+Identical visual output to the original static site
 
-Identical visual output compared to the original site
+Cleaner, more maintainable project structure
 
-Cleaner project structure
-
-Framework-ready for future features such as routing, animations, and dynamic data
+Framework-ready for routing, animations, and dynamic data
 
 Deployment
-
-This portfolio is deployed using Netlify
-, providing fast, reliable hosting and continuous deployment.
+This portfolio is deployed using Netlify, providing fast, reliable hosting and continuous deployment.
 
 Future Enhancements
-
 Planned improvements include:
 
 Data-driven sections using typed models (projects & experience)
@@ -182,10 +151,8 @@ Potential migration to utility-first styling (Tailwind CSS)
 Backend or CMS integration for dynamic content
 
 Acknowledgments
-
 Built with ❤️ in Visual Studio Code
 
-Typography set in the Inter
- typeface
+Typography set in the Inter typeface
 
 Feel free to explore the project and connect with me through the social links provided in the portfolio.
